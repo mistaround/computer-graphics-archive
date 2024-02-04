@@ -1,0 +1,6 @@
+9.4 14:00
+For rotation matrix:
+https://people.eecs.berkeley.edu/~ug/slide/pipeline/assignments/as5/rotation.html
+
+For generating matrix multiplication testcase:
+https://www.wolframalpha.com/input?i=matrix+multiplication+calculator&assumption=%7B%22F%22%2C+%22MatricesOperations%22%2C+%22theMatrix2%22%7D+-%3E%22%7B%7B1%2C2%2C3%2C1%7D%2C%7B3%2C2%2C1%2C2%7D%2C%7B1%2C2%2C3%2C3%7D%2C%7B3%2C2%2C1%2C4%7D%7D%22&assumption=%7B%22F%22%2C+%22MatricesOperations%22%2C+%22theMatrix1%22%7D+-%3E%22%7B1%2C2%2C3%2C4%7D%22

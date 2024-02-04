@@ -1,0 +1,28 @@
+(5 pts) 
+In mat4.h, there are several declarations of the operator* function. 
+One declaration is vec4 operator*(const vec4 &v) const (line 89), while another is vec4 operator*(const vec4 &v, const mat4 &m) (line 106). 
+Explain the mathematical difference in the output of these functions. 
+Additionally, explain what each of the consts does in each function.
+
+Answer:
+In line 89, the operator* is declared as a class method, which uses this.data as the matrix m, and v is the argument vec4. 
+So the multiplication is m * v = [4*4] * [4*1], which results in a [4*1] column vector.
+The const limitation is applied to the function, which means we should return a new vec4 without changing any class attributes.
+The const limitation is applied to the argument, which means we should not change the input vector.
+
+In line 106, the operator* is declared outside of the class, which uses two arguments vec4 v and mat4 m.
+So the multiplication is v * m = [1*4] * [4*4], which results in a [1*4] row vector. However, we can only return it as a vec4 (column vector) in our implementation.
+The const limitations are applied to the argumens, which means we should not change any of the input arguments inside this function.
+
+(5 pts) 
+In vec4.h, there are two declarations of the operator[] function. 
+Describe a situation in which only the first function (line 25) can be used, and describe a situation in which only the second function (line 28) can be used.
+
+Answer:
+The first function (line 25) can be used as a right value since it's const limitated, which means it does not allow modifiation of the value it returns.
+For example:
+float val = vec[1];
+
+The second function (line 28) can be used as a left value, when we want to mofify vec4 by index.
+For example:
+vec[1] = 1.0f
